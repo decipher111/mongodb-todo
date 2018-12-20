@@ -11,15 +11,15 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',{ useNewUrlParser: true 
     console.log("connect to the database")
     const db = client.db("TodoApp")
 
-    // db.collection('Todos').insertOne({
-    //     todo:"something",
-    //     completed:"false"
-    // }, (err,result) => {
-    //     if(err){
-    //         return console.log("unbale to insert a document in the collection todos", err)
-    //     }
-    //     console.log(JSON.stringify(result.ops,undefined,2))
-    // })
+    db.collection('Todos').insertOne({
+        todo:"something",
+        completed:"false"
+    }, (err,result) => {
+        if(err){
+            return console.log("unbale to insert a document in the collection todos", err)
+        }
+        console.log(JSON.stringify(result.ops,undefined,2))
+    })
     
     db.collection('users').insertOne({
         name:'Pranay',
