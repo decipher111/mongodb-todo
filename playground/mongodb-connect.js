@@ -20,7 +20,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',{ useNewUrlParser: true 
     //     }
     //     console.log(JSON.stringify(result.ops,undefined,2))
     // })
-
+    
     db.collection('users').insertOne({
         name:'Pranay',
         age:'19'
